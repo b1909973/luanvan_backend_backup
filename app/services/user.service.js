@@ -71,7 +71,7 @@ const driver = neo4j.driver('bolt://100.26.186.75:7687',
      const create = async (user)=>{
       const session = driver.session({database:'neo4j'});
         try {
-        const result = await session.run(`CREATE (u:User {id:${user.id}}})`);
+        const result = await session.run(`CREATE (u:user {id:${user.id}}})`);
       console.log(user)
           
         } catch (error) {
